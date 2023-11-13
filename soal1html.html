@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulasi Array Kendaraan</title>
+</head>
+<body>
+
+<h1>Data Kendaraan</h1>
+
+<p id="dataKendaraan"></p>
+<p id="mobilIndex"></p>
+
+<script>
+// Buat array kendaraan
+var kendaraan = [
+    'mobil', 'motor', 'pesawat', 'kapal', 'kereta',
+    'sepeda', 'truk', 'helikopter', 'jetski', 'skuter'
+];
+
+// Tampilkan semua data kendaraan
+document.getElementById("dataKendaraan").innerText = "Data Kendaraan: " + kendaraan.join(', ');
+
+// Cari indeks dari 'mobil' dalam array kendaraan
+var indexMobil = kendaraan.indexOf('mobil');
+document.getElementById("mobilIndex").innerText = "'Mobil' berada pada indeks: " + indexMobil;
+
+// Hapus satu data kendaraan dengan unshift
+kendaraan.unshift();
+// Menampilkan data kendaraan setelah unshift
+document.getElementById("dataKendaraan").innerText = "Data Kendaraan setelah unshift: " + kendaraan.join(', ');
+</script>
+
+</body>
+</html>

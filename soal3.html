@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pilihan Makanan dan Minuman</title>
+    <script>
+        function tampilkanMenu() {
+            var pilihan = document.getElementById("kategori").value;
+            var output = document.getElementById("output");
+
+            var makanan = ["bakso", "mie ayam", "soto", "kambing guling", "ayam bakar", "sate", "mie goreng", "mendoan"];
+            var minuman = ["es milo", "es teh manis", "es jeruk", "es campur", "es kopisusu", "es teh tawar", "es dawet"];
+
+            if (pilihan === "makanan") {
+                output.innerHTML = "<ul>" + makanan.map(item => "<li>" + item + "</li>").join("") + "</ul>";
+            } else if (pilihan === "minuman") {
+                output.innerHTML = "<ul>" + minuman.map(item => "<li>" + item + "</li>").join("") + "</ul>";
+            } else {
+                output.innerHTML = "Pilihan tidak valid. Silahkan pilih menu yang benar.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Pilih Kategori Menu</h1>
+    <select id="kategori">
+        <option value="pilih">Pilih Kategori</option>
+        <option value="makanan">Makanan</option>
+        <option value="minuman">Minuman</option>
+    </select>
+    <button onclick="tampilkanMenu()">Tampilkan</button>
+
+    <div id="output"></

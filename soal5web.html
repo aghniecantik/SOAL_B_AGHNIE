@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menampilkan Kalimat di Web</title>
+</head>
+<body>
+  <h1>Hasil Kalimat:</h1>
+  <p id="output"></p>
+
+  <script>
+    function buatKalimat(nama, umur, alamat, hobby) {
+      return `Nama saya ${nama} umur saya ${umur} tahun, alamat saya di ${alamat}, dan saya punya hobi yaitu ${hobby}.`;
+    }
+
+    // Panggil fungsi dan simpan hasilnya
+    const kalimat = buatKalimat('John Doe', 30, 'Jl. Malioboro, Yogjakarta', 'gaming');
+
+    // Masukkan hasil fungsi ke dalam elemen HTML
+    document.getElementById('output').textContent = kalimat;
+  </script>
+</body>
+</html>

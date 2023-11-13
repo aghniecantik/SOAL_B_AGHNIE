@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perulangan Kalimat</title>
+</head>
+<body>
+
+<input type="number" id="jumlahPerulangan" placeholder="Masukkan jumlah perulangan">
+<button onclick="tampilkanKalimat()">Tampilkan</button>
+<p id="hasilPerulangan"></p>
+
+<script>
+function tampilkanKalimat() {
+    var jumlah = document.getElementById('jumlahPerulangan').value;
+    var kalimat = "Saya orang yang sabar, ramah, dan tidak membenci orang.<br>";
+    var hasil = "";
+
+    for (var i = 0; i < jumlah; i++) {
+        hasil += kalimat;
+    }
+
+    document.getElementById('hasilPerulangan').innerHTML = hasil;
+}
+</script>
+
+</body>
+</html>

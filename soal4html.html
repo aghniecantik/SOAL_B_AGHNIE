@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Matematika</title>
+</head>
+<body>
+
+<h1>Kalkulator Matematika</h1>
+
+<p>Masukkan dua angka:</p>
+<input type="number" id="angka1">
+<input type="number" id="angka2">
+
+<button onclick="hitung()">Hitung</button>
+
+<p>Hasil:</p>
+<p id="hasilPenjumlahan"></p>
+<p id="hasilPengurangan"></p>
+<p id="hasilPerkalian"></p>
+<p id="hasilPembagian"></p>
+<p id="bilanganTerbesar"></p>
+
+<script>
+function hitung() {
+    var angka1 = parseFloat(document.getElementById("angka1").value);
+    var angka2 = parseFloat(document.getElementById("angka2").value);
+
+    var penjumlahan = angka1 + angka2;
+    var pengurangan = angka1 - angka2;
+    var perkalian = angka1 * angka2;
+    var pembagian = angka1 / angka2;
+
+    document.getElementById("hasilPenjumlahan").innerText = "Penjumlahan: " + penjumlahan;
+    document.getElementById("hasilPengurangan").innerText = "Pengurangan: " + pengurangan;
+    document.getElementById("hasilPerkalian").innerText = "Perkalian: " + perkalian;
+    document.getElementById("hasilPembagian").innerText = "Pembagian: " + pembagian;
+
+    var bilanganTerbesar = angka1 > angka2 ? angka1 : angka2;
+    document.getElementById("bilanganTerbesar").innerText = "Bilangan terbesar: " + bilanganTerbesar;
+}
+</script>
+
+</body>
+</html>
